@@ -1,54 +1,17 @@
-/*
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-import { BrowserRouter } from "react-router-dom";
-
-import App from "./App";
-
-import "./index.css";
-import "react-loading-skeleton/dist/skeleton.css";
-
-import { AuthProvider } from "./context/AuthContext";
-import { MovieProvider } from "./context/MovieContext";
-import { ListProvider } from "./context/ListContext";
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <AuthProvider>
-      <MovieProvider>
-        <ListProvider>
-          <App />
-        </ListProvider>
-      </MovieProvider>
-    </AuthProvider>
-  </BrowserRouter>
-); */
 
 import React from "react";
 import ReactDOM from "react-dom/client";
 
 import {
-  BrowserRouter,
+  HashRouter,
 } from "react-router-dom";
 
 import App from "./App";
 
-import {
-  AuthProvider,
-} from "./context/AuthContext";
-
-import {
-  ProfileProvider,
-} from "./context/ProfileContext";
-
-import {
-  MyListProvider,
-} from "./context/MyListContext";
-
-import {
-  PlayerProvider,
-} from "./context/PlayerContext";
+import { AuthProvider } from "./context/AuthContext";
+import { ProfileProvider } from "./context/ProfileContext";
+import { MyListProvider } from "./context/MyListContext";
+import { PlayerProvider } from "./context/PlayerContext";
 
 import "./index.css";
 
@@ -56,7 +19,7 @@ ReactDOM.createRoot(
   document.getElementById("root")
 ).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <ProfileProvider>
           <MyListProvider>
@@ -66,6 +29,6 @@ ReactDOM.createRoot(
           </MyListProvider>
         </ProfileProvider>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
