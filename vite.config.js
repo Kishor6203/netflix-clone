@@ -5,13 +5,11 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
 
-  // Replace with your GitHub repository name
   base: "/netflix-clone/",
 
   build: {
     outDir: "dist",
     assetsDir: "assets",
-    sourcemap: false,
 
     rollupOptions: {
       output: {
@@ -22,7 +20,7 @@ export default defineConfig({
             "firebase/auth",
             "firebase/firestore",
           ],
-          icons: ["lucide-react"],
+          icons: ["lucide-react", "react-icons"],
         },
       },
     },
